@@ -1,7 +1,7 @@
 import React from 'react';
 import InputWithLabel from '../UI/InputWithLabel';
 
-function LoginForm({ mail, setMail, password, setPassword }) {
+function LoginBody({ mail, setMail, password, setPassword }) {
   return (
     <>
       <InputWithLabel
@@ -22,4 +22,4 @@ function LoginForm({ mail, setMail, password, setPassword }) {
   );
 }
 
-export default LoginForm;
+export default LoginBody;
