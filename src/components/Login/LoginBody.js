@@ -15,7 +15,7 @@ function LoginBody({ mail, setMail, password, setPassword }) {
         value={password}
         setValue={setPassword}
         label='Password'
-        type='text'
+        type='password'
         placeholder='Enter password'
       />
     </>
