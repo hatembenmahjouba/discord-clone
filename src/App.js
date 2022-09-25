@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
-import LoginPage from './pages/authPages/LoginPage/LoginPage';
-import RegisterPage from './pages/authPages/RegisterPage/RegisterPage';
-import Dashboard from './pages/Dashboard/Dashboard';
+import LoginPage from './pages/authPages/LoginPage';
+import RegisterPage from './pages/authPages/RegisterPage';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
