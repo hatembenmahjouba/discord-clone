@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import AlertNotification from './components/UI/AlertNotification';
 import LoginPage from './pages/authPages/LoginPage';
 import RegisterPage from './pages/authPages/RegisterPage';
 import Dashboard from './pages/Dashboard';
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Navigate to='/dashboard' />} />
         </Routes>
       </BrowserRouter>
+      <AlertNotification />
     </>
   );
 }

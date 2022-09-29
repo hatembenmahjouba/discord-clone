@@ -4,8 +4,13 @@ import AuthBox from '../../components/UI/AuthBox';
 import RegisterBody from '../../components/Register/RegisterBody';
 import RegisterFooter from '../../components/Register/RegisterFooter';
 import { validateRegisterForm } from '../../utils/validators';
+import { getActions } from '../../redux/actions/authActions';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [mail, setMail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +22,8 @@ const RegisterPage = () => {
   }, [mail, username, password, setIsFormValid]);
 
   const handleRegister = () => {
-    console.log('registering');
+    const { register } = getActions(dispatch);
+    register({ mail, username, password }, navigate);
   };
   return (
     <AuthBox>
