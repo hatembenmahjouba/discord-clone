@@ -7,6 +7,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Typography from '@mui/material/Typography';
 import InputWithLabel from '../UI/InputWithLabel';
+import CustomPrimaryButton from '../UI/CustomPrimaryButton';
 
 const AddFriendDialog = ({
   isDialogOpen,
@@ -45,6 +46,18 @@ const AddFriendDialog = ({
             placeholder='Enter mail address'
           />
         </DialogContent>
+        <DialogActions>
+          <CustomPrimaryButton
+            onClick={handleSendInvitation}
+            disabled={!isFormValid}
+            label='Send'
+            additionalStyles={{
+              marginLeft: '15px',
+              marginRight: '15px',
+              marginBottom: '10px',
+            }}
+          />
+        </DialogActions>
       </Dialog>
     </div>
   );
