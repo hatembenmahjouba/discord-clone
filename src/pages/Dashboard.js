@@ -7,6 +7,7 @@ import AppBar from '../components/AppBar/AppBar';
 import { logout } from '../utils/auth';
 import { getActions } from '../redux/actions/authActions';
 import { useDispatch } from 'react-redux';
+import { connectWithSocketServer } from '../realtimeCommunication/socketConnection';
 
 const Wrapper = styled('div')({
   width: '100%',
@@ -23,6 +24,7 @@ const Dashboard = () => {
     } else {
       const { setUserDetails } = getActions(dispatch);
       setUserDetails(JSON.parse(userDetails));
+      connectWithSocketServer();
     }
   }, [dispatch]);
   return (
