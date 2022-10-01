@@ -24,7 +24,7 @@ const Dashboard = () => {
     } else {
       const { setUserDetails } = getActions(dispatch);
       setUserDetails(JSON.parse(userDetails));
-      connectWithSocketServer();
+      connectWithSocketServer(JSON.parse(userDetails));
     }
   }, [dispatch]);
   return (

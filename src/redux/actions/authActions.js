@@ -28,7 +28,7 @@ const login = (userDetails, navigate) => {
       dispatch(openAlertMessage(response?.exception?.response?.data));
     } else {
       const { userDetails } = response?.data;
-      localStorage.setItem('user', JSON.stringify('userDetails'));
+      localStorage.setItem('user', JSON.stringify(userDetails));
 
       dispatch(setUserDetails(userDetails));
       navigate('/dashboard');
